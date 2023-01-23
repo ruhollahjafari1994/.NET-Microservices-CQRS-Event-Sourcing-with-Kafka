@@ -1,0 +1,4 @@
+docker network create --attachable -d bridge mydockernetwork
+docker network ls
+docker-compose up -d
+docker ps
