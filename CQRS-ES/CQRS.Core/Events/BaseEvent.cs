@@ -2,14 +2,14 @@ using CQRS.Core.Messages;
 
 namespace CQRS.Core.Events
 {
-    public class BaseEvent : Message
+    public abstract class BaseEvent : Message
     {
         protected BaseEvent(string type)
         {
-            this.Type = type;
+            Type = type;
         }
 
-        public int Version { get; set; }
         public string Type { get; set; }
+        public int Version { get; set; }
     }
 }
