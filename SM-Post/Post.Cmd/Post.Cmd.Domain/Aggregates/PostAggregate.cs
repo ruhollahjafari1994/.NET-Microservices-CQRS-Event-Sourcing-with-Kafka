@@ -9,14 +9,10 @@ namespace Post.Cmd.Domain.Aggregates
         private string _author;
         private readonly Dictionary<Guid, Tuple<string, string>> _comments = new();
 
-        public bool Active
-        {
-            get => _active; set => _active = value;
-        }
+        public bool Active { get => _active; set => _active = value; }
 
         public PostAggregate()
         {
-
         }
 
         public PostAggregate(Guid id, string author, string message)
@@ -169,13 +165,10 @@ namespace Post.Cmd.Domain.Aggregates
 
             if (!_author.Equals(username, StringComparison.CurrentCultureIgnoreCase))
             {
-                throw new InvalidOperationException("You are not allowed to delete a post that was made by someone else!");
+                throw new InvalidOperationException("You are not allowed to delete a post that was made by somebody else!");
             }
 
-            RaiseEvent(new PostRemovedEvent
-            {
-                Id = _id
-            });
+            RaiseEvent(new PostRemovedEvent { Id = _id });
         }
 
         public void Apply(PostRemovedEvent @event)
