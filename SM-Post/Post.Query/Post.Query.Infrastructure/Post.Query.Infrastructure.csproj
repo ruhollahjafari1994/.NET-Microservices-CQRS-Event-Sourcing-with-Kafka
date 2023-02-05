@@ -7,6 +7,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1"/>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0"/>
     <PackageReference Include="Confluent.Kafka" Version="1.8.2"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.2"/>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.5"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Post.Query.Domain\Post.Query.Domain.csproj"/>
